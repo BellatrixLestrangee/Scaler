@@ -1,0 +1,26 @@
+
+
+Q1. Population density
+Ans. .sort_values() without parameter is for Series. When used with df, pass the column to sort with.
+
+Q2. Student Filtering
+Ans. Brackets are important when handling multiple conditions within brackets.
+
+Q3. Mean Income
+Ans. When aggregating, a few functions can't be passed as it is in .agg(). Eg. 'mean' is passed as astring
+
+Q4. Groupby and drop
+Ans. size with groupby object will give number of unique observations
+
+Q5. On your marks
+Ans. .agg() pushes groupby columns into index. need to merge all columns that are not to be duplicated
+
+Q6. Q6. Group the Data
+Ans. .reset_index() to pull columns out of groupby created index
+
+Q7.Q7. Super Valuable Customers
+Ans. Filtering the group by values can be done by using lambda functions and filters
+
+   # Your Code Starts here
+
+    df = df.groupby("Name").filter(lambda user: (user['Quantity Ordered'].sum() >= x) & (user['Price Each'].mean() >= y))
